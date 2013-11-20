@@ -1,0 +1,15 @@
+apply from: 'config/spring-boot.gradle'
+
+
+allprojects {
+
+    repositories {
+        maven { url "http://repo.spring.io/libs-snapshot" }
+        mavenLocal()
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+}
+
