@@ -1,4 +1,4 @@
-defaultTasks 'clean', 'build'
+task stage(dependsOn: ['clean', 'installApp'])
 
 buildscript {
     repositories {
