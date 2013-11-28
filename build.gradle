@@ -1,4 +1,4 @@
-task stage(dependsOn: ['clean', 'build'])
+task stage(dependsOn: ['clean', 'jar'])
 
 buildscript {
     repositories {
