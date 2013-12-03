@@ -20,8 +20,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
             .formLogin()
                 .and()
-             .httpBasic()
-                .and()
             .logout()
                 .permitAll()
                 .and()
@@ -33,6 +31,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             AuthenticationManagerBuilder auth) throws Exception {
         auth
             .inMemoryAuthentication()
-                .withUser("snowdream").password("sdf").roles("USER");
+                .withUser("snowdream").password("123456").roles("USER");
     }
 }
