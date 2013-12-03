@@ -11,26 +11,18 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-            .authorizeRequests()
-                .antMatchers("/helloworld/**","/resources/**").permitAll()
-                .anyRequest().authenticated()
-                .and()
-            .formLogin()
-                .and()
-            .logout()
-                .permitAll()
-                .and()
-            .rememberMe();;
-    }
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.authorizeRequests().antMatchers("/helloworld/**", "/resources/**","/", "/home").permitAll()
+				.anyRequest().authenticated();
+		http.formLogin().defaultSuccessUrl("/hello").loginPage("/login")
+				.permitAll().and().logout().permitAll().and().rememberMe();
+	}
 
-    @Autowired
-    public void registerGlobalAuthentication(
-            AuthenticationManagerBuilder auth) throws Exception {
-        auth
-            .inMemoryAuthentication()
-                .withUser("snowdream").password("123456").roles("USER");
-    }
+	@Autowired
+	public void registerGlobalAuthentication(AuthenticationManagerBuilder auth)
+			throws Exception {
+		auth.inMemoryAuthentication().withUser("snowdream").password("123456")
+				.roles("USER");
+	}
 }
