@@ -3,6 +3,7 @@ task stage(dependsOn: ['clean', 'jar'])
 buildscript {
     repositories {
         maven { url "http://repo.spring.io/libs-snapshot" }
+        maven { url "http://repo.spring.io/milestone" }
         mavenLocal()
     }
     dependencies {
@@ -18,6 +19,7 @@ allprojects {
 
     repositories {
         maven { url "http://repo.spring.io/libs-snapshot" }
+        maven { url "http://repo.spring.io/milestone" }
         mavenLocal()
     }
 
