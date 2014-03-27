@@ -4,3 +4,7 @@ war {
     baseName = 'spring-boot-gradle-template'
     version =  '0.1.0'
 }
+
+configurations {
+    providedRuntime
+}
