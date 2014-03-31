@@ -1,4 +1,4 @@
-package hello;
+package com.github.snowdream.web.template;
 
 import java.util.concurrent.atomic.AtomicLong;
 

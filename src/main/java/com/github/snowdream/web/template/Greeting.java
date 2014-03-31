@@ -1,4 +1,4 @@
-package hello;
+package com.github.snowdream.web.template;
 
 public class Greeting {
 

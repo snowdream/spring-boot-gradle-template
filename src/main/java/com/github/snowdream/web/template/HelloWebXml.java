@@ -1,4 +1,4 @@
-package hello;
+package com.github.snowdream.web.template;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
